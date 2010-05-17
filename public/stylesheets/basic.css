@@ -1,0 +1,12 @@
+body {
+	font-family: Helvetica;
+}
+
+a {
+	color: #176C99;
+	text-decoration: none;
+}
+
+a:hover {
+	background-color: #DFE3DE;
+}

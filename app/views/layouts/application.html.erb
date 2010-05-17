@@ -1,5 +1,12 @@
-<%= link_to 'units', units_path %>
-<%= link_to 'rooms', rooms_path %>
-<%= link_to 'renters', renters_path %>
-<br>
-<%= yield %>
+<html>
+	<head>
+		<%= stylesheet_link_tag 'basic' %>
+	</head>
+	<body>
+		<%= link_to 'units', units_path %>
+		<%= link_to 'rooms', rooms_path %>
+		<%= link_to 'renters', renters_path %>
+		<br>
+		<%= yield %>
+	</body>
+</html>
