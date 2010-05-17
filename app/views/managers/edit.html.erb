@@ -1,0 +1,11 @@
+<% form_for @manager do |f| %>
+	<%= f.text_field :name %>
+	<%= f.label :name %><br>
+	<%= f.text_field :login %>
+	<%= f.label :login %><br>
+	<%= f.text_field :email %>
+	<%= f.label :email %><br>
+	<%= f.text_field :phone %>
+	<%= f.label :phone %><br>
+	<%= f.submit :go %>
+<% end %>

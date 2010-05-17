@@ -10,3 +10,7 @@ a {
 a:hover {
 	background-color: #DFE3DE;
 }
+
+#login {
+	float: right;
+}

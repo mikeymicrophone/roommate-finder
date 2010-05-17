@@ -1,4 +1,6 @@
 class RentersController < ApplicationController
+  before_filter :require_manager
+  
   def show
     @renter = Renter.find params[:id]
   end

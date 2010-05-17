@@ -9,4 +9,10 @@ ActionController::Routing::Routes.draw do |map|
   end
   
   map.resources :renters
+  
+  map.resources :managers, :member => {:activate => :get}
+  
+  map.resources :manager_sessions
+  map.login '/login', :controller => 'manager_sessions', :action => 'new'
+  map.logout '/logout', :controller => 'manager_sessions', :action => 'destroy'
 end

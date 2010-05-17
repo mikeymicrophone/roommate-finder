@@ -6,7 +6,16 @@
 		<%= link_to 'units', units_path %>
 		<%= link_to 'rooms', rooms_path %>
 		<%= link_to 'renters', renters_path %>
-		<br>
+		<%= link_to 'managers', managers_path %>
+		<div id="login">
+			<% if current_manager %>
+			  <%= link_to current_manager.login, current_manager %>
+			  <%= link_to 'log out', logout_path %>
+			<% else %>
+			  <%= link_to 'log in', login_path %>
+			<% end %>
+		</div>
+		<hr>
 		<%= yield %>
 	</body>
 </html>

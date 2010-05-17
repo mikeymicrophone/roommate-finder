@@ -1,4 +1,6 @@
 class RoomsController < ApplicationController
+  before_filter :require_manager
+  
   def show
     @room = Room.find params[:id]
   end

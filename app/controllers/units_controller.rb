@@ -1,4 +1,6 @@
 class UnitsController < ApplicationController
+  before_filter :require_manager
+  
   def new
     @unit = Unit.new params[:unit]
   end

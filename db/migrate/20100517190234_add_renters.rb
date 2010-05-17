@@ -6,6 +6,7 @@ class AddRenters < ActiveRecord::Migration
       t.string :email
       t.integer :room_id
       t.integer :pay_day
+      t.timestamps
     end
   end
 

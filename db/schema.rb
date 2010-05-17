@@ -9,14 +9,36 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100517190234) do
+ActiveRecord::Schema.define(:version => 20100517195424) do
+
+  create_table "managers", :force => true do |t|
+    t.string   "name"
+    t.string   "login"
+    t.string   "email"
+    t.string   "phone"
+    t.boolean  "active"
+    t.string   "password_salt"
+    t.string   "crypted_password"
+    t.string   "persistence_token"
+    t.string   "single_access_token"
+    t.string   "perishable_token"
+    t.integer  "login_count"
+    t.integer  "failed_login_count"
+    t.datetime "last_request_at"
+    t.datetime "current_login_at"
+    t.datetime "last_login_at"
+    t.string   "current_login_ip"
+    t.string   "last_login_ip"
+  end
 
   create_table "renters", :force => true do |t|
-    t.string  "name"
-    t.string  "phone"
-    t.string  "email"
-    t.integer "room_id"
-    t.integer "pay_day"
+    t.string   "name"
+    t.string   "phone"
+    t.string   "email"
+    t.integer  "room_id"
+    t.integer  "pay_day"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "rooms", :force => true do |t|
