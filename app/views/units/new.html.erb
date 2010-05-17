@@ -1,0 +1,11 @@
+<% form_for @unit do |f| %>
+	<%= f.text_field :name %>
+	<%= f.label :name %><br>
+	<%= f.text_field :address %>
+	<%= f.label :address %><br>
+	<%= f.text_field :number %>
+	<%= f.label :number %><br>
+	<%= f.text_field :rent %>
+	<%= f.label :rent %><br>
+	<%= f.submit :go %>
+<% end %>

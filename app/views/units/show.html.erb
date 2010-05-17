@@ -1,0 +1,7 @@
+<h2><%= @unit.name %></h2>
+<%= @unit.address %><br>
+<%= @unit.number %><br>
+<%= link_to pluralize(@unit.rooms.count, 'room'), unit_rooms_path(@unit) %>
+<%= link_to 'add room', new_unit_room_path(@unit) %><br>
+<%= link_to 'edit', edit_unit_path(@unit) %>
+<%= link_to 'destroy', unit_path(@unit), :method => :delete %>

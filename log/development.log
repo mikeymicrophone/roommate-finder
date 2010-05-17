@@ -1,0 +1,330 @@
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddUnits (20100517180741)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "units" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "number" varchar(255), "rent" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100517180741')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("units")[0m
+
+
+Processing UnitsController#index (for 127.0.0.1 at 2010-05-17 14:18:37) [GET]
+  [4;36;1mUnit Load (0.5ms)[0m   [0;1mSELECT * FROM "units" [0m
+Rendering units/index
+Completed in 38ms (View: 33, DB: 0) | 200 OK [http://localhost/units]
+
+
+Processing UnitsController#index (for 127.0.0.1 at 2010-05-17 14:18:56) [GET]
+  [4;35;1mUnit Load (0.3ms)[0m   [0mSELECT * FROM "units" [0m
+Rendering units/index
+Completed in 73ms (View: 69, DB: 0) | 200 OK [http://localhost/units]
+
+
+Processing UnitsController#new (for 127.0.0.1 at 2010-05-17 14:18:57) [GET]
+Rendering units/new
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/units/new]
+
+
+Processing UnitsController#create (for 127.0.0.1 at 2010-05-17 14:21:34) [POST]
+  Parameters: {"commit"=>"go", "authenticity_token"=>"Goy2jwcN3C3ihSNh6J0tBpsUZx8nXOFUvFBnEF4crzc=", "unit"=>{"number"=>"Studio 1", "address"=>"116 n 5th st, Brooklyn NY 11211", "name"=>"Mode on 5th", "rent"=>""}}
+  [4;36;1mUnit Create (0.5ms)[0m   [0;1mINSERT INTO "units" ("name", "address", "number", "created_at", "updated_at", "rent") VALUES('Mode on 5th', '116 n 5th st, Brooklyn NY 11211', 'Studio 1', '2010-05-17 18:21:34', '2010-05-17 18:21:34', NULL)[0m
+Redirected to http://localhost:3000/units
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/units]
+
+
+Processing UnitsController#index (for 127.0.0.1 at 2010-05-17 14:21:34) [GET]
+  [4;35;1mUnit Load (0.5ms)[0m   [0mSELECT * FROM "units" [0m
+Rendering units/index
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/units]
+
+
+Processing UnitsController#new (for 127.0.0.1 at 2010-05-17 14:21:37) [GET]
+Rendering units/new
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/units/new]
+
+
+Processing UnitsController#create (for 127.0.0.1 at 2010-05-17 14:22:10) [POST]
+  Parameters: {"commit"=>"go", "authenticity_token"=>"Goy2jwcN3C3ihSNh6J0tBpsUZx8nXOFUvFBnEF4crzc=", "unit"=>{"number"=>"1C", "address"=>"26 Cook St, Brooklyn NY 11206", "name"=>"26 Cook", "rent"=>""}}
+  [4;36;1mUnit Create (0.4ms)[0m   [0;1mINSERT INTO "units" ("name", "address", "number", "created_at", "updated_at", "rent") VALUES('26 Cook', '26 Cook St, Brooklyn NY 11206', '1C', '2010-05-17 18:22:10', '2010-05-17 18:22:10', NULL)[0m
+Redirected to http://localhost:3000/units
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/units]
+
+
+Processing UnitsController#index (for 127.0.0.1 at 2010-05-17 14:22:10) [GET]
+  [4;35;1mUnit Load (0.5ms)[0m   [0mSELECT * FROM "units" [0m
+Rendering units/index
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://localhost/units]
+
+
+Processing UnitsController#new (for 127.0.0.1 at 2010-05-17 14:22:12) [GET]
+Rendering units/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/units/new]
+
+
+Processing UnitsController#create (for 127.0.0.1 at 2010-05-17 14:22:27) [POST]
+  Parameters: {"commit"=>"go", "authenticity_token"=>"Goy2jwcN3C3ihSNh6J0tBpsUZx8nXOFUvFBnEF4crzc=", "unit"=>{"number"=>"1D", "address"=>"26 Cook St, Brooklyn NY 11206", "name"=>"26 Cook 2", "rent"=>""}}
+  [4;36;1mUnit Create (0.4ms)[0m   [0;1mINSERT INTO "units" ("name", "address", "number", "created_at", "updated_at", "rent") VALUES('26 Cook 2', '26 Cook St, Brooklyn NY 11206', '1D', '2010-05-17 18:22:27', '2010-05-17 18:22:27', NULL)[0m
+Redirected to http://localhost:3000/units
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/units]
+
+
+Processing UnitsController#index (for 127.0.0.1 at 2010-05-17 14:22:27) [GET]
+  [4;35;1mUnit Load (0.7ms)[0m   [0mSELECT * FROM "units" [0m
+Rendering units/index
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://localhost/units]
+
+
+Processing UnitsController#new (for 127.0.0.1 at 2010-05-17 14:22:48) [GET]
+Rendering units/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/units/new]
+
+
+Processing UnitsController#create (for 127.0.0.1 at 2010-05-17 14:23:15) [POST]
+  Parameters: {"commit"=>"go", "authenticity_token"=>"Goy2jwcN3C3ihSNh6J0tBpsUZx8nXOFUvFBnEF4crzc=", "unit"=>{"number"=>"5th fl", "address"=>"Roebling & Metropolitan", "name"=>"Roebling", "rent"=>""}}
+  [4;36;1mUnit Create (0.4ms)[0m   [0;1mINSERT INTO "units" ("name", "address", "number", "created_at", "updated_at", "rent") VALUES('Roebling', 'Roebling & Metropolitan', '5th fl', '2010-05-17 18:23:15', '2010-05-17 18:23:15', NULL)[0m
+Redirected to http://localhost:3000/units
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/units]
+
+
+Processing UnitsController#index (for 127.0.0.1 at 2010-05-17 14:23:15) [GET]
+  [4;35;1mUnit Load (0.6ms)[0m   [0mSELECT * FROM "units" [0m
+Rendering units/index
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://localhost/units]
+
+
+Processing UnitsController#new (for 127.0.0.1 at 2010-05-17 14:23:17) [GET]
+Rendering units/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/units/new]
+
+
+Processing UnitsController#create (for 127.0.0.1 at 2010-05-17 14:23:40) [POST]
+  Parameters: {"commit"=>"go", "authenticity_token"=>"Goy2jwcN3C3ihSNh6J0tBpsUZx8nXOFUvFBnEF4crzc=", "unit"=>{"number"=>"3rd fl", "address"=>"Roebling & Metropolitan", "name"=>"Roebling 2", "rent"=>""}}
+  [4;36;1mUnit Create (0.3ms)[0m   [0;1mINSERT INTO "units" ("name", "address", "number", "created_at", "updated_at", "rent") VALUES('Roebling 2', 'Roebling & Metropolitan', '3rd fl', '2010-05-17 18:23:40', '2010-05-17 18:23:40', NULL)[0m
+Redirected to http://localhost:3000/units
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/units]
+
+
+Processing UnitsController#index (for 127.0.0.1 at 2010-05-17 14:23:40) [GET]
+  [4;35;1mUnit Load (0.7ms)[0m   [0mSELECT * FROM "units" [0m
+Rendering units/index
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://localhost/units]
+
+
+Processing UnitsController#new (for 127.0.0.1 at 2010-05-17 14:23:43) [GET]
+Rendering units/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/units/new]
+
+
+Processing UnitsController#create (for 127.0.0.1 at 2010-05-17 14:24:53) [POST]
+  Parameters: {"commit"=>"go", "authenticity_token"=>"Goy2jwcN3C3ihSNh6J0tBpsUZx8nXOFUvFBnEF4crzc=", "unit"=>{"number"=>"142 Powers", "address"=>"300 Graham Ave, Brooklyn NY, 11211", "name"=>"The Glove Factory", "rent"=>""}}
+  [4;36;1mUnit Create (0.4ms)[0m   [0;1mINSERT INTO "units" ("name", "address", "number", "created_at", "updated_at", "rent") VALUES('The Glove Factory', '300 Graham Ave, Brooklyn NY, 11211', '142 Powers', '2010-05-17 18:24:53', '2010-05-17 18:24:53', NULL)[0m
+Redirected to http://localhost:3000/units
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/units]
+
+
+Processing UnitsController#index (for 127.0.0.1 at 2010-05-17 14:24:53) [GET]
+  [4;35;1mUnit Load (0.8ms)[0m   [0mSELECT * FROM "units" [0m
+Rendering units/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/units]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddUnits (20100517180741)
+Migrating to AddRooms (20100517182612)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "rooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "number" varchar(255), "unit_id" integer, "rent" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100517182612')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("rooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("units")[0m
+
+
+Processing UnitsController#show (for 127.0.0.1 at 2010-05-17 14:51:01) [GET]
+  Parameters: {"id"=>"6"}
+
+NoMethodError (undefined method `stringify_keys!' for "6":String):
+  app/controllers/units_controller.rb:16:in `new'
+  app/controllers/units_controller.rb:16:in `show'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (94.6ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UnitsController#show (for 127.0.0.1 at 2010-05-17 14:51:52) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mUnit Load (0.2ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 6) [0m
+Rendering units/show
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/units/6]
+
+
+Processing RoomsController#new (for 127.0.0.1 at 2010-05-17 14:51:56) [GET]
+  Parameters: {"unit_id"=>"6"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]=):
+  app/controllers/rooms_controller.rb:7:in `new'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RoomsController#new (for 127.0.0.1 at 2010-05-17 14:52:24) [GET]
+  Parameters: {"unit_id"=>"6"}
+Rendering rooms/new
+  [4;35;1mUnit Load (0.6ms)[0m   [0mSELECT * FROM "units" [0m
+Completed in 42ms (View: 15, DB: 1) | 200 OK [http://localhost/units/6/rooms/new]
+
+
+Processing RoomsController#create (for 127.0.0.1 at 2010-05-17 14:54:05) [POST]
+  Parameters: {"commit"=>"go", "authenticity_token"=>"Goy2jwcN3C3ihSNh6J0tBpsUZx8nXOFUvFBnEF4crzc=", "room"=>{"number"=>"1", "name"=>"Desmond's room", "unit_id"=>"1", "rent"=>"200"}}
+  [4;36;1mRoom Create (0.4ms)[0m   [0;1mINSERT INTO "rooms" ("name", "number", "created_at", "unit_id", "updated_at", "rent") VALUES('Desmond''s room', '1', '2010-05-17 18:54:05', 1, '2010-05-17 18:54:05', 200)[0m
+Redirected to http://localhost:3000/rooms
+Completed in 78ms (DB: 0) | 302 Found [http://localhost/rooms]
+
+
+Processing RoomsController#index (for 127.0.0.1 at 2010-05-17 14:54:05) [GET]
+  [4;35;1mRoom Load (0.5ms)[0m   [0mSELECT * FROM "rooms" [0m
+Rendering rooms/index
+  [4;36;1mUnit Load (0.3ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 1) [0m
+Completed in 16ms (View: 12, DB: 1) | 200 OK [http://localhost/rooms]
+
+
+Processing UnitsController#show (for 127.0.0.1 at 2010-05-17 14:54:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUnit Load (0.2ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 1) [0m
+Rendering units/show
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/units/1]
+
+
+Processing UnitsController#show (for 127.0.0.1 at 2010-05-17 14:54:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUnit Load (0.2ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 1) [0m
+Rendering units/show
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rooms" WHERE ("rooms".unit_id = 1) [0m
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/units/1]
+
+
+Processing RoomsController#index (for 127.0.0.1 at 2010-05-17 14:54:52) [GET]
+  Parameters: {"unit_id"=>"1"}
+  [4;36;1mRoom Load (0.5ms)[0m   [0;1mSELECT * FROM "rooms" [0m
+Rendering rooms/index
+  [4;35;1mUnit Load (0.2ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 1) [0m
+Completed in 12ms (View: 8, DB: 1) | 200 OK [http://localhost/units/1/rooms]
+
+
+Processing RoomsController#index (for 127.0.0.1 at 2010-05-17 14:55:39) [GET]
+  Parameters: {"unit_id"=>"1"}
+  [4;36;1mUnit Load (0.2ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 1) [0m
+Rendering rooms/index
+  [4;35;1mRoom Load (0.3ms)[0m   [0mSELECT * FROM "rooms" WHERE ("rooms".unit_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 1) [0m
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://localhost/units/1/rooms]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2010-05-17 14:55:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mRoom Load (0.2ms)[0m   [0mSELECT * FROM "rooms" WHERE ("rooms"."id" = 1) [0m
+Rendering rooms/show
+  [4;36;1mUnit Load (0.3ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 1) [0m
+Completed in 82ms (View: 76, DB: 0) | 200 OK [http://localhost/rooms/1]
+
+
+Processing UnitsController#show (for 127.0.0.1 at 2010-05-17 14:55:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUnit Load (0.2ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 1) [0m
+Rendering units/show
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rooms" WHERE ("rooms".unit_id = 1) [0m
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/units/1]
+
+
+Processing UnitsController#edit (for 127.0.0.1 at 2010-05-17 14:55:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUnit Load (0.2ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 1) [0m
+Rendering units/edit
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://localhost/units/1/edit]
+
+
+Processing UnitsController#index (for 127.0.0.1 at 2010-05-17 14:55:56) [GET]
+  [4;36;1mUnit Load (0.8ms)[0m   [0;1mSELECT * FROM "units" [0m
+Rendering units/index
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/units/]
+
+
+Processing UnitsController#show (for 127.0.0.1 at 2010-05-17 14:56:01) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUnit Load (0.2ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 2) [0m
+Rendering units/show
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rooms" WHERE ("rooms".unit_id = 2) [0m
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/units/2]
+
+
+Processing RoomsController#new (for 127.0.0.1 at 2010-05-17 14:56:03) [GET]
+  Parameters: {"unit_id"=>"2"}
+Rendering rooms/new
+  [4;35;1mUnit Load (0.6ms)[0m   [0mSELECT * FROM "units" [0m
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/units/2/rooms/new]
+
+
+Processing RoomsController#index (for 127.0.0.1 at 2010-05-17 14:56:06) [GET]
+  Parameters: {"unit_id"=>"2"}
+  [4;36;1mUnit Load (0.2ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 2) [0m
+Rendering rooms/index
+  [4;35;1mRoom Load (0.2ms)[0m   [0mSELECT * FROM "rooms" WHERE ("rooms".unit_id = 2) [0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/units/2/rooms]
+
+
+Processing UnitsController#edit (for 127.0.0.1 at 2010-05-17 14:56:09) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUnit Load (0.2ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 2) [0m
+Rendering units/edit
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/units/2/edit]

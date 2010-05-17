@@ -1,0 +1,5 @@
+<% @rooms.each do |r| %>
+	<%= link_to r.name, r %>
+	<%= link_to r.unit.name, r.unit %>
+	<br>
+<% end %>

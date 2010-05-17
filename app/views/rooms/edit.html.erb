@@ -1,0 +1,11 @@
+<% form_for @room do |f| %>
+	<%= f.text_field :name %>
+	<%= f.label :name %><br>
+	<%= f.text_field :number %>
+	<%= f.label :number %><br>
+	<%= f.text_field :rent %>
+	<%= f.label :rent %><br>
+	<%= f.select :unit_id, Unit.all.map { |u| [u.name, u.id] } %>
+	<%= f.label :unit_id %><br>
+	<%= f.submit :go %>
+<% end %>

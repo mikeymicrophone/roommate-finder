@@ -1,0 +1,7 @@
+<% @units.each do |u| %>
+	<%= link_to u.name, u %>
+	<%= u.number %>
+	<%= u.address %>
+	<%= link_to 'edit', edit_unit_path(u) %><br>
+<% end %>
+<%= link_to 'new unit', new_unit_path %>

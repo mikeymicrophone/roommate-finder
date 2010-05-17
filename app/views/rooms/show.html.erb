@@ -1,0 +1,5 @@
+<%= @room.name %>
+<%= @room.number %>
+<%= link_to @room.unit.name, @room.unit %>
+<%= link_to 'edit', edit_room_path(@room) %>
+<%= link_to 'destroy', room_path(@room), :method => :delete %>
