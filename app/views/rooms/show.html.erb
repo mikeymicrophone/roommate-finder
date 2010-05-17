@@ -1,5 +1,10 @@
 <%= @room.name %>
 <%= @room.number %>
 <%= link_to @room.unit.name, @room.unit %>
+<% if @room.renter %>
+	<%= link_to @room.renter.name, @room.renter %>
+<% else %>
+  <%= link_to 'add renter', new_room_renter_path(@room) %>
+<% end %>
 <%= link_to 'edit', edit_room_path(@room) %>
 <%= link_to 'destroy', room_path(@room), :method => :delete %>

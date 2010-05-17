@@ -9,7 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100517182612) do
+ActiveRecord::Schema.define(:version => 20100517190234) do
+
+  create_table "renters", :force => true do |t|
+    t.string  "name"
+    t.string  "phone"
+    t.string  "email"
+    t.integer "room_id"
+    t.integer "pay_day"
+  end
 
   create_table "rooms", :force => true do |t|
     t.string   "name"

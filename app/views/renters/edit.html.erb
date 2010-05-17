@@ -1,0 +1,13 @@
+<% form_for @renter do |f| %>
+	<%= f.text_field :name %>
+	<%= f.label :name %><br>
+	<%= f.text_field :phone %>
+	<%= f.label :phone %><br>
+	<%= f.text_field :email %>
+	<%= f.label :email %><br>
+	<%= f.select :room_id, Room.all.map { |r| [r.name, r.id] } %>
+	<%= f.label :room_id %><br>
+	<%= f.text_field :pay_day %>
+	<%= f.label :pay_day %><br>
+	<%= f.submit :go %>
+<% end %>

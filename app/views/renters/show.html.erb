@@ -1,0 +1,8 @@
+<%= @renter.name %><br>
+<%= @renter.phone %><br>
+<%= @renter.email %><br>
+<%= link_to @renter.room.name, @renter.room %><br>
+<%= link_to @renter.room.unit.name, @renter.room.unit %>
+
+<%= link_to 'edit', edit_renter_path(@renter) %>
+<%= link_to 'destroy', renter_path(@renter), :method => :delete %>
