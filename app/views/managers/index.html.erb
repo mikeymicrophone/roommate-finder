@@ -1,7 +1,11 @@
-<% @managers.each do |manager| %>
-	<%= manager.name %>
-	<%= manager.email %>
-	<%= manager.phone %>
-	<%= link_to 'activate', activate_manager_path(manager) unless manager.active %>
-<% end %><br>
+<table>
+	<% @managers.each do |manager| %>
+		<tr>
+			<td><%= manager.name %></td>
+			<td><%= manager.email %></td>
+			<td><%= manager.phone %></td>
+			<td><%= link_to 'activate', activate_manager_path(manager) unless manager.active %></td>
+		</tr>
+	<% end %>
+</table>
 <%= link_to 'new manager', new_manager_path %>

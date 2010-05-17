@@ -1,5 +1,8 @@
-<% @rooms.each do |r| %>
-	<%= link_to r.name, r %>
-	<%= link_to r.unit.name, r.unit %>
-	<br>
-<% end %>
+<table>
+	<% @rooms.each do |r| %>
+		<tr>
+			<td><%= link_to r.name, r %></td>
+			<td><%= link_to r.unit.name, r.unit %></td>
+		</tr>
+	<% end %>
+</table>

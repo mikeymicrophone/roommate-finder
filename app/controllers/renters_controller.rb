@@ -17,7 +17,11 @@ class RentersController < ApplicationController
   end
   
   def index
-    @renters = Renter.all
+    @renters = if params[:unit_id]
+      Unit.find(params[:unit_id]).renters
+    else
+      Renter.all
+    end
   end
   
   def edit

@@ -10,7 +10,7 @@ class ManagerSessionsController < ApplicationController
     @manager_session = ManagerSession.new params[:manager_session]
     if @manager_session.save
       redirect_back_or_default units_path
-    elsif @manager = Manager.find_by_email(params[:user_session][:username])
+    elsif @manager = Manager.find_by_email(params[:manager_session][:login])
       @manager_session = ManagerSession.new :login => @manager.login, :password => params[:manager_session][:password]
       if @manager_session.save
         redirect_back_or_default units_path

@@ -15,4 +15,5 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :manager_sessions
   map.login '/login', :controller => 'manager_sessions', :action => 'new'
   map.logout '/logout', :controller => 'manager_sessions', :action => 'destroy'
+  map.root :controller => 'manager_sessions', :action => 'new'
 end

@@ -1,5 +1,9 @@
-<% @renters.each do |r| %>
-	<%= link_to r.name, r %>
-	<%= link_to r.room.name, r.room %>
-	<%= link_to r.room.unit.name, r.room.unit %><br>
-<% end %>
+<table>
+	<% @renters.each do |r| %>
+		<tr>
+			<td><%= link_to r.name, r %></td>
+			<td><%= link_to r.room.name, r.room %></td>
+			<td><%= link_to r.room.unit.name, r.room.unit %></td>
+		</tr>
+	<% end %>
+</table>

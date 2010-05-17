@@ -2,9 +2,10 @@
 	<% @units.each do |u| %>
 		<tr>
 			<td><%= link_to u.name, u %></td>
+			<td><%= link_to pluralize(u.rooms.count, 'room'), unit_rooms_path(u) %></td>
+			<td><%= link_to pluralize(u.renters.count, 'renter'), unit_renters_path(u) %></td>
 			<td><%= u.number %></td>
 			<td><%= u.address %></td>
-			<td><%= link_to 'edit', edit_unit_path(u) %></td>
 		</tr>
 	<% end %>
 </table>

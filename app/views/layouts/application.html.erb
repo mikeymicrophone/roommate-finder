@@ -1,13 +1,16 @@
 <html>
 	<head>
 		<%= stylesheet_link_tag 'basic' %>
+		<title>
+		roommate finder admin panel
+		</title>
 	</head>
 	<body>
 		<%= link_to 'units', units_path %>
 		<%= link_to 'rooms', rooms_path %>
 		<%= link_to 'renters', renters_path %>
 		<%= link_to 'managers', managers_path %>
-		<div id="login">
+		<div id='login'>
 			<% if current_manager %>
 			  <%= link_to current_manager.login, current_manager %>
 			  <%= link_to 'log out', logout_path %>
