@@ -2,3 +2,4 @@
 	<%= link_to m.name, m %> <%= m.year %>
 	<%= link_to pluralize(m.payments.count, 'payment'), month_payments_path(m) %><br>
 <% end %>
+<%= link_to 'new month', new_month_path %>
