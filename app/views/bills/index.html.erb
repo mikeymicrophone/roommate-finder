@@ -1,0 +1,13 @@
+<table>
+	<% @bills.each do |b| %>
+	  <tr>
+		  <td><%= b.name %></td>
+		  <td><%= b.payee.name %></td>
+		  <td><%= number_to_currency b.amount %></td>
+		  <td>due: <%= b.due_on.strftime("%Y-%m-%d") %></td>
+		  <td>paid: <%= b.paid_on.strftime("%Y-%m-%d") %></td>
+		  <td><%= link_to 'edit', edit_bill_path(b) %></td>
+		</tr>
+	<% end %>
+</table>
+<%= link_to 'new bill', new_bill_path %>

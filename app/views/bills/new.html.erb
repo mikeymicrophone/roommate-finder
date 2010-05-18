@@ -1,0 +1,13 @@
+<% form_for @bill do |f| %>
+	<%= f.text_field :name %>
+	<%= f.label :name %><br>
+	<%= f.text_field :amount, :size => 6 %>
+	<%= f.label :amount %><br>
+	<%= f.select :payee_id, Payee.all.map { |p| [p.name, p.id] } %>
+	<%= f.label :payee_id %><br>
+	<%= f.date_select :due_on %>
+	<%= f.label :due_on %><br>
+	<%= f.date_select :paid_on %>
+	<%= f.label :paid_on %>
+	<%= f.submit %>
+<% end %>

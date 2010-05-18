@@ -1,0 +1,10 @@
+<table>
+	<% @payees.each do |p| %>
+		<tr>
+			<td><%= p.name %></td>
+			<td><%= link_to pluralize(p.bills.count, 'bill'), payee_bills_path(p) %></td>
+			<td><%= p.service %></td>
+		</tr>
+	<% end %>
+</table>
+<%= link_to 'new payee', new_payee_path %>

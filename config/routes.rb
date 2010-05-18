@@ -23,6 +23,11 @@ ActionController::Routing::Routes.draw do |map|
     month.resources :units
   end
   
+  map.resources :bills
+  map.resources :payees do |payee|
+    payee.resources :bills
+  end
+  
   map.resources :managers, :member => {:activate => :get}
   
   map.resources :manager_sessions

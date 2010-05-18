@@ -1,0 +1,13 @@
+<% form_for @payee do |f| %>
+	<%= f.text_field :name %>
+	<%= f.label :name %><br>
+	<%= f.text_field :address %>
+	<%= f.label :address %><br>
+	<%= f.text_field :phone %>
+	<%= f.label :phone %><br>
+	<%= f.text_field :email %>
+	<%= f.label :email %><br>
+	<%= f.text_field :service %>
+	<%= f.label :service %><br>
+	<%= f.submit :save %>
+<% end %>
