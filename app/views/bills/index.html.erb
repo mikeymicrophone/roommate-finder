@@ -1,7 +1,7 @@
 <table>
 	<% @bills.each do |b| %>
 	  <tr>
-		  <td><%= b.name %></td>
+		  <td><%= link_to b.name, b %></td>
 		  <td><%= b.payee.name %></td>
 		  <td><%= number_to_currency b.amount %></td>
 		  <td>due: <%= b.due_on.strftime("%Y-%m-%d") %></td>

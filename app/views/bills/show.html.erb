@@ -1,0 +1,4 @@
+<%= @bill.name %><br>
+<%= link_to @bill.payee.name, @bill.payee %><br>
+<%= @bill.amount %><br>
+<%= link_to 'edit', edit_bill_path(@bill) %>

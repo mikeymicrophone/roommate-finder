@@ -1,6 +1,6 @@
 class PayeesController < ApplicationController
   def show
-    @payee = Payee.find params[:payee]
+    @payee = Payee.find params[:id]
   end
   
   def index
