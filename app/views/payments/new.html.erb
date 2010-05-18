@@ -1,0 +1,15 @@
+<% form_for @payment do |f| %>
+	<%= f.text_field :amount %>
+	<%= f.label :amount %><br>
+	<%= f.select :renter_id, Renter.all.map { |r| [r.name, r.id] } %>
+	<%= f.label :renter_id %><br>
+	<%= f.select :room_id, Room.all.map { |r| ["[#{r.unit.name}]#{r.name}", r.id]} %>
+	<%= f.label :room_id %><br>
+	<%= f.date_select :paid_on %>
+	<%= f.label :paid_on %><br>
+	<%= f.date_select :deposited_on %>
+	<%= f.label :deposited_on %><br>
+	<%= f.select :month_id, Month.all.map { |m| ["#{m.name} #{m.year}", m.id] } %>
+	<%= f.label :month_id %><br>
+	<%= f.submit :go %>
+<% end %>

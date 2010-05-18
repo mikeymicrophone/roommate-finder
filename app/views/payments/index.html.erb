@@ -1,0 +1,10 @@
+<table>
+	<% @payments.each do |p| %>
+		<tr>
+			<td><%= p.renter.name %></td>
+			<td><%= p.amount.to_i %></td>
+			<td><%= p.paid_on.strftime("%Y-%m-%d") %></td>
+		</tr>
+	<% end %>
+</table>
+<%= link_to 'new payment', new_payment_path %>

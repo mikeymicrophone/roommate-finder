@@ -1,0 +1,4 @@
+<% @months.each do |m| %>
+	<%= link_to m.name, m %> <%= m.year %>
+	<%= link_to pluralize(m.payments.count, 'payment'), month_payments_path(m) %><br>
+<% end %>

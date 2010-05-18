@@ -4,6 +4,8 @@
 			<td><%= link_to r.name, r %></td>
 			<td><%= link_to r.room.name, r.room %></td>
 			<td><%= link_to r.room.unit.name, r.room.unit %></td>
+			<td><%= link_to 'add payment', new_renter_payment_path(r) %></td>
+			<td>last payment: <%= r.payments.last.andand.paid_on.andand.strftime("%Y-%m-%d") %></td>
 		</tr>
 	<% end %>
 </table>
