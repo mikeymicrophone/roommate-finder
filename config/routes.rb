@@ -18,6 +18,9 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :months do |month|
     month.resources :payments
+    month.resources :rooms
+    month.resources :renters
+    month.resources :units
   end
   
   map.resources :managers, :member => {:activate => :get}

@@ -1,9 +1,11 @@
 <table>
 	<% @payments.each do |p| %>
 		<tr>
-			<td><%= p.renter.name %></td>
-			<td><%= p.amount.to_i %></td>
+			<td><%= link_to p.renter.name, p %></td>
+			<td><%= number_to_currency p.amount %></td>
 			<td><%= p.paid_on.strftime("%Y-%m-%d") %></td>
+			<td><%= p.room.unit.name %></td>
+			<td><%= p.room.name %></td>
 		</tr>
 	<% end %>
 </table>

@@ -19,6 +19,8 @@ class RentersController < ApplicationController
   def index
     @renters = if params[:unit_id]
       Unit.find(params[:unit_id]).renters
+    elsif params[:month_id]
+      Month.find(params[:month_id]).renters
     else
       Renter.all
     end

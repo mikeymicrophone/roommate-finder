@@ -1,0 +1,5 @@
+<h1><%= @month.name %></h1><h2><%= @month.year %></h2>
+<%= link_to pluralize(@month.rooms.count, 'room'), month_rooms_path(@month) %><br>
+<%= link_to pluralize(@month.renters.count, 'renter'), month_renters_path(@month) %><br>
+<%= link_to pluralize(@month.units.length, 'unit'), month_units_path(@month) %><br>
+<%= link_to pluralize(@month.payments.length, 'payment'), month_payments_path(@month) %>

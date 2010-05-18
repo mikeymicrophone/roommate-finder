@@ -19,6 +19,8 @@ class RoomsController < ApplicationController
   def index
     @rooms = if params[:unit_id]
       Unit.find(params[:unit_id]).rooms
+    elsif params[:month_id]
+      Month.find(params[:month_id]).rooms
     else
       Room.all
     end

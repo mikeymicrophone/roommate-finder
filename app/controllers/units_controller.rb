@@ -11,7 +11,11 @@ class UnitsController < ApplicationController
   end
   
   def index
-    @units = Unit.all
+    @units = if params[:month_id]
+      Month.find(params[:month_id]).units
+    else
+      Unit.all
+    end
   end
   
   def show
