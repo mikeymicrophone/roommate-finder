@@ -28,6 +28,8 @@ ActionController::Routing::Routes.draw do |map|
     payee.resources :bills
   end
   
+  map.resources :chores, :member => {:complete => :put}
+  
   map.resources :managers, :member => {:activate => :get}
   
   map.resources :manager_sessions

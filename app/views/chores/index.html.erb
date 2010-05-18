@@ -1,0 +1,10 @@
+<table>
+	<% @chores.each do |c| %>
+	  <tr>
+			<td><%= c.name %></td>
+			<td><%= link_to c.manager.name, c.manager %></td>
+			<td><%= link_to c.unit.name, c.unit %></td>
+		</tr>
+	<% end %>
+</table>
+<%= link_to 'new chore', new_chore_path %>

@@ -1,7 +1,7 @@
 <table>
 	<% @payees.each do |p| %>
 		<tr>
-			<td><%= p.name %></td>
+			<td><%= link_to p.name, p %></td>
 			<td><%= link_to pluralize(p.bills.count, 'bill'), payee_bills_path(p) %></td>
 			<td><%= p.service %></td>
 		</tr>

@@ -1,0 +1,9 @@
+<h2><%= @chore.name %></h2>
+<p><%= @chore.comments %></p>
+<%= link_to @chore.unit.name, @chore.unit if @chore.unit %><br>
+<%= link_to @chore.manager.name, @chore.manager if @chore.manager %><br>
+<% if @chore.complete? %>
+	<%= 'complete' %>
+<% else %>
+  <%= link_to 'this is complete', complete_chore_path(@chore), :method => :put %>
+<% end %>

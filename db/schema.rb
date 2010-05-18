@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100518182113) do
+ActiveRecord::Schema.define(:version => 20100518200029) do
 
   create_table "bills", :force => true do |t|
     t.string   "name"
@@ -17,6 +17,16 @@ ActiveRecord::Schema.define(:version => 20100518182113) do
     t.date     "due_on"
     t.date     "paid_on"
     t.integer  "payee_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "chores", :force => true do |t|
+    t.string   "name"
+    t.integer  "manager_id"
+    t.integer  "unit_id"
+    t.text     "comments"
+    t.boolean  "complete"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
