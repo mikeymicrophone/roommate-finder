@@ -3,6 +3,7 @@ ActionController::Routing::Routes.draw do |map|
     unit.resources :rooms
     unit.resources :renters
     unit.resources :payments
+    unit.resources :chores
   end
   
   map.resources :rooms do |room|
@@ -30,7 +31,9 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :chores, :member => {:complete => :put}
   
-  map.resources :managers, :member => {:activate => :get}
+  map.resources :managers, :member => {:activate => :get} do |manager|
+    manager.resources :chores
+  end
   
   map.resources :manager_sessions
   map.login '/login', :controller => 'manager_sessions', :action => 'new'

@@ -15,6 +15,8 @@ class ChoresController < ApplicationController
   
   def new
     @chore = Chore.new params[:chore]
+    @chore.manager_id ||= params[:manager_id]
+    @chore.unit_id ||= params[:unit_id]
   end
   
   def create
