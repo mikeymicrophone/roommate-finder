@@ -5,6 +5,7 @@
 			<td><%= link_to pluralize(u.rooms.count, 'room'), unit_rooms_path(u) %></td>
 			<td><%= link_to pluralize(u.renters.count, 'renter'), unit_renters_path(u) %></td>
 			<td><%= link_to pluralize(u.payments.count, 'payment'), unit_payments_path(u) %></td>
+			<td><%= link_to pluralize(u.chores.count, 'chore'), unit_chores_path(u) %></td>
 			<td><%= u.number %></td>
 			<td><%= u.address %></td>
 		</tr>

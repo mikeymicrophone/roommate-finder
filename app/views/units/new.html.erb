@@ -7,5 +7,7 @@
 	<%= f.label :number %><br>
 	<%= f.text_field :rent %>
 	<%= f.label :rent %><br>
+	<%= f.select :status, ['Prospective', 'Secured', 'Closed', 'Occupied'] %>
+	<%= f.label :status %><br>
 	<%= f.submit :go %>
 <% end %>

@@ -4,7 +4,13 @@ class ChoresController < ApplicationController
   end
   
   def index
-    @chores = Chore.all
+    @chores = if params[:manager_id]
+      Manager.find(params[:manager_id]).chores
+    elsif params[:unit_id]
+      Unit.find(params[:unit_id]).chores
+    else
+      Chore.all
+    end
   end
   
   def new
