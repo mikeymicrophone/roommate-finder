@@ -6,15 +6,17 @@
 		</title>
 	</head>
 	<body>
-		<%= link_to 'units', units_path %>
-		<%= link_to 'rooms', rooms_path %>
-		<%= link_to 'renters', renters_path %>
-		<%= link_to 'managers', managers_path %>
-		<%= link_to 'months', months_path %>
-		<%= link_to 'payments', payments_path %>
-		<%= link_to 'bills', bills_path %>
-		<%= link_to 'payees', payees_path %>
-		<%= link_to 'chores', chores_path %>
+		<% if current_manager %>
+			<%= link_to 'units', units_path %>
+			<%= link_to 'rooms', rooms_path %>
+			<%= link_to 'renters', renters_path %>
+			<%= link_to 'managers', managers_path %>
+			<%= link_to 'months', months_path %>
+			<%= link_to 'payments', payments_path %>
+			<%= link_to 'bills', bills_path %>
+			<%= link_to 'payees', payees_path %>
+			<%= link_to 'chores', chores_path %>
+		<% end %>
 		<div id='login'>
 			<% if current_manager %>
 			  <%= link_to current_manager.login, current_manager %>
@@ -23,6 +25,7 @@
 			  <%= link_to 'log in', login_path %>
 			<% end %>
 		</div>
+		<div class='clearfix'></div>
 		<hr>
 		<%= yield %>
 	</body>

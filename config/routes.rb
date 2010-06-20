@@ -35,8 +35,10 @@ ActionController::Routing::Routes.draw do |map|
     manager.resources :chores
   end
   
+  map.connect '/newyork', :controller => 'not_a_controller', :path => '/iweb/index.html'
+  
   map.resources :manager_sessions
   map.login '/login', :controller => 'manager_sessions', :action => 'new'
   map.logout '/logout', :controller => 'manager_sessions', :action => 'destroy'
-  map.root :controller => 'manager_sessions', :action => 'new'
+  map.root :controller => 'static', :action => 'index'
 end
